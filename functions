@@ -1,0 +1,72 @@
+#include<stdio.h>
+void circle()
+{
+    int r;
+    printf("enter value of radius:\n");
+    scanf("%d",&r);
+    printf("area of circle is %.2f",3.14*r*r);
+}
+void rectangle(int a,int b)
+{
+    printf("area of rectangle is %d",a*b);
+    
+}
+int square()
+{
+    int side;
+    printf("enter side of square:\n");
+    scanf("%d",&side);
+    return side*side;
+    
+}
+float triangle(int base,int height)
+{
+    return 0.5*base*height;
+}
+    
+void main()
+{
+    while(1)
+    {
+     printf("\n1.circle\n");
+     printf("2.rectangle\n");
+     printf("3.square\n");
+     printf("4.triangle\n");
+     printf("5.exit\n");
+     int choice;
+     printf("enter choice");
+     scanf("%d",&choice);
+     
+    
+    if(choice==5)
+    break;
+    
+   
+        switch(choice)
+        {
+            case 1:
+            circle();
+            break;
+            case 2:
+            int a,b;
+            printf("enter 2 numbers:\n");
+            scanf("%d%d",&a,&b);
+            rectangle(a,b);
+            break;
+            case 3:
+            int res=square();
+            printf("area of square is %d",res);
+            break;
+            case 4:
+            int base,height;
+            printf("enter base and height:\n");
+            scanf("%d %d",&base,&height);
+            float ans=triangle(base,height);
+            printf("area of triangle is %.2f",ans);
+            break;
+            default:
+            printf("wrong input");
+            break;
+        }
+    }
+}
